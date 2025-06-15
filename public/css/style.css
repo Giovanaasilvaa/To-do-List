@@ -1,0 +1,915 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;      
+  height: 100vh;      
+  object-fit: cover;  
+  z-index: -1;        
+}
+
+/* Conteúdo por cima do vídeo */
+.welcome-container,
+.login-box,
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;     
+  height: 100vh;           
+  text-align: center;     
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 25px;
+}
+
+.animate__animated.animate__bounce {
+  --animate-duration: 2s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 45% }
+}
+
+.typewriter {
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px ;
+  width: 0;
+  animation: typing 1s steps(30, end) forwards;
+}
+
+/* Botão de início */
+.btn-start {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn-start:hover {
+  background: #e6e6e6;
+}
+
+/*Login*/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw;
+    position: relative;
+}
+
+
+.back {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back:hover {
+    text-decoration: underline;
+    transform: scale(1.05) translateX(2px);
+}
+
+.back:active {
+    transform: scale(1.0) translateX(2px);
+}
+
+.pagina-lista-tarefas > a.back {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: none;           
+  box-shadow: none;           
+  color: #000;                
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+  padding: 0;
+  margin-top: 0;
+  transform: none;
+}
+.pagina-lista-tarefas > a.back:hover {
+  text-decoration: underline;
+  transform: translateX(2px); 
+}
+.pagina-lista-tarefas > a.back:active {
+  transform: translateX(-1px); 
+}
+
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 1s ease-out 0s forwards;
+    gap: 8px;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.login-box label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    transform: scale(1); 
+}
+
+.login-box button:hover {
+    transform: scale(1.05);
+    background-color: #222; 
+}
+
+.login-box button::before {
+    content: "🔒";
+    transition: all 0.2s ease;
+}
+
+.login-box button:active::before {
+    content: "🔓";
+}
+
+.login-box button:active {
+    transform: scale(0.98) translateY(2px);
+    background-color: #000; 
+}
+
+/*Esqueceu a senha*/
+.esqueceu {
+    display: block;
+    margin-top: -8%;
+    margin-left: -23.5%;
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.esqueceu:hover {
+    text-decoration: underline;
+    transform: scale(1.05) translateX(2px);
+}
+
+.esqueceu:active {
+    transform: scale(1.0) translateX(2px);
+}
+
+/*OLHO*/
+.toggle-senha {
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.toggle-senha img {
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.toggle-senha img:hover {
+    transform: scale(1.2);
+}
+
+/*Não tem conta?*/
+.registro {
+    display: inline-block;
+    gap: 10px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.registro:hover {
+    text-decoration: underline;
+    transform: scale(1.05) translateX(2px);
+}
+
+.registro:active {
+    transform: scale(1.0) translateX(2px);
+}
+
+/*Cadastro*/
+
+.container-registro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100vw;
+    position: relative;
+}
+
+.login-box-cadastro {
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 1s ease-out 0s forwards;
+    max-width: 1200px;
+    margin-top: 10%;
+    width: 300px;
+    height: 840px;
+}
+
+
+.login-box-cadastro h2 {
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.login-box-cadastro label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-box-cadastro input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #555;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.login-box-cadastro button {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    transform: scale(1); 
+}
+
+.login-box-cadastro button:hover {
+    transform: scale(1.05);
+    background-color: #222; 
+}
+
+.login-box-cadastro button::before {
+    content: "🔒";
+    transition: all 0.2s ease;
+}
+
+.login-box-cadastro button:active::before {
+    content: "🔓";
+}
+
+.login-box-cadastro button:active {
+    transform: scale(0.98) translateY(2px);
+    background-color: #000; 
+}
+
+.senha-regras {
+    list-style: none;
+    padding-left: 0;
+    margin-top: -10%;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    text-align: left;
+    padding-left: 10px;
+}
+  
+.senha-regras li {
+    margin-bottom: 4px;
+}
+
+.input-box {
+    width: 100%;
+    margin-bottom: 24px; 
+    position: relative;
+    width: 100%;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; 
+    font-size: 16px;
+    border: 2px solid #444;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/*Lista Tarefa*/
+
+.pagina-lista-tarefas a,
+.tarefa-acoes a {
+  text-decoration: none;
+  outline: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/*CONTAINER PRINCIPAL  */
+.container-lista {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
+  width: 100vw;
+  position: relative;
+  padding: 20px; 
+  box-sizing: border-box;
+  background: transparent; 
+}
+
+body.container-lista {
+  background-image: url(../../assets/fundo_geral.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+/*  ÁREA DE TAREFAS  */
+.pagina-lista-tarefas {
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px); 
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 650px; 
+  max-height: 80vh;
+  overflow-y: auto; 
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 1s ease-out forwards;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.pagina-lista-tarefas h1 {
+  margin-bottom: 20px;
+  font-size: 2.4rem;
+  color: #222;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+/* Base para todos os botões */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Botão escuro (adicionar tarefa) */
+.btn-primario {
+  background-color: #f59f2e;
+  color: #fff;
+}
+
+.btn-primario:hover,
+.btn-primario:focus {
+  background-color: #cc862a;
+  transform: scale(1.05);
+}
+
+.btn-primario:active {
+  background-color: #cc862a;
+  transform: scale(1.00);
+}
+
+
+.pagina-lista-tarefas ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.pagina-lista-tarefas li {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 16px;
+  padding: 18px 20px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.tarefa-conteudo {
+  flex: 1 1 auto;
+  text-align: left;
+  padding-right: 10px;
+}
+
+/* Título + Prazo */
+.titulo-prazo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.titulo-prazo strong {
+  font-size: 1.3rem;
+  color: #1a1a1a;
+}
+
+.titulo-prazo .hora {
+  font-size: 0.95rem;
+  color: #555;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Descrição */
+.tarefa-conteudo .descricao {
+  font-size: 1.1rem;
+  color: #222;
+  margin: 4px 0 15px;
+  line-height: 1.4;
+}
+
+/* Status */
+.tarefa-conteudo .status {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #007700;
+   margin: 4px 0 15px;
+  display: inline-block;
+}
+
+/* Botões */
+.tarefa-acoes {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.tarefa-acoes a {
+  padding: 6px 14px;
+  font-size: 0.88rem;
+  border: 1px solid #efab7a;
+  border-radius: 6px;
+  background-color: #fdf6f0;
+  color: #ef8f4f;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.tarefa-acoes a:hover,
+.tarefa-acoes a:focus {
+  background-color: #fff5ec;
+  color: #e87a29;
+  transform: scale(1.04);
+}
+
+.tarefa-acoes a:active {
+  background-color: #efab7a;
+  color: #fff;
+  transform: scale(0.98);
+}
+
+
+/*Adicionar*/
+
+body.container-add {
+  background-image: url(../../assets/fundo_geral.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+.container-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Estiliza o formulário principal */
+.pagina-add-tarefas {
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+  color: #333;
+}
+
+/* Título */
+.pagina-add-tarefas h2 {
+  margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+/* Estilização de rótulos */
+.pagina-add-tarefas label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Caixa de entrada comum */
+.input-box {
+  margin-bottom: 18px;
+}
+
+.input-box input,
+.input-box textarea,
+.input-box select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box select:focus {
+  border-color: #333;
+  background-color: #fff;
+}
+
+/* Botão de submit */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #444;
+}
+
+/* Link de voltar */
+a.registro {
+  display: block; 
+  margin: 16px auto 0 auto; 
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+a.registro:hover {
+  text-decoration: underline;
+  transform: scale(1.05) translateX(2px);
+}
+
+a.registro:active {
+    transform: scale(1.0) translateX(2px);
+}
+
+.submit-mi {
+    width: 100%;
+    padding: 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    transform: scale(1); 
+}
+
+.submit-mit:hover {
+    transform: scale(1.05);
+    background-color: #222; 
+}
+
+.submit-mi:active {
+  transform: scale(0.98) translateY(2px);
+  background-color: #000; 
+}
+
+
+/*Editar*/
+
+body.container-editar {
+  background-image: url(../../assets/fundo_geral.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+.container-editar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+
+}
+
+.pagina-add-editar{
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(12px);
+  padding: 30px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-out;
+  color: #333;
+}
+
+.pagina-add-editar h2 {
+   margin-bottom: 24px;
+  font-size: 1.5rem;
+  color: #222;
+}
+
+
+.pagina-add-editar label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.input-box input,
+.input-box textarea,
+.input-box select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+
+.pagina-add-editar a.registro {
+  display: block; 
+  margin: 16px auto 0 auto; 
+  color: #000000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+  text-align: center;
+}
+
+.pagina-add-editar a.registro:hover {
+  text-decoration: underline;
+  transform: scale(1.05) translateX(2px);
+}
+
+.pagina-add-editar a.registro:active{
+    transform: scale(1.0) translateX(2px);
+}
+
+
+.pagina-sair{
+height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "IBM Plex Sans";
+}
+
+.confirmar button {
+    width: 50%;
+    padding: 12px;
+    background-color: #111;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+ 
+    transition: all 0.3s ease;
+    transform: scale(1); 
+}
+
+.confirmar form {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+  }
+
+
+.confirmar button:hover {
+    transform: scale(1.05);
+    background-color: #222; 
+}
+
+.confirmar button:active {
+    transform: scale(0.98) translateY(2px);
+    background-color: #000; 
+}
+
+.confirmar{
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    animation: fadeIn 1s ease-out 0s forwards;
+}
+
+body.pagina-sair {
+  background-image: url(../../assets/fundo_geral.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+
+.theme-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.theme-toggle:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0, 91, 187, 0.5);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Estilo do Botão em Modo Escuro*/
+.dark-mode .theme-toggle {
+    background-color: #ffcc00;
+    color: #121212;
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.3);
+}
+
+.dark-mode .theme-toggle:hover {
+    background-color: #e6b800;
+    box-shadow: 0 6px 14px rgba(255, 255, 255, 0.3);
+}
+
+/* Animação para troca de vídeo*/
+#bg-video.fade-out {
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+}
+
+#bg-video.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in;
+}
+
+body.dark-mode {
+  background: url('/todo-list/assets/imgdark.png') no-repeat center center fixed;
+  background-size: cover;
+}
