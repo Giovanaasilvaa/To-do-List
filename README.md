@@ -26,7 +26,7 @@ O **Extractify** é uma aplicação web desenvolvida com **Python (Flask)** que 
 
 Essa ferramenta realiza a **extração de texto de documentos PDF** usando a biblioteca **pdfplumber** e a **geração de arquivos Word** com a biblioteca **python-docx**.
 
-> ⚠️ *O sistema faz apenas extração de texto simples. Layouts mais complexos, como tabelas ou imagens, podem não ser preservados.*
+> ⚠️ *Este projeto tem foco acadêmico e ainda não possui recursos avançados como recuperação de senha. Essas funcionalidades estão planejadas para futuras atualizações.*
 
 ---
 
@@ -37,7 +37,7 @@ Essa ferramenta realiza a **extração de texto de documentos PDF** usando a bib
 ✅ Modo claro e escuro (Dark Mode)
 ✅ Interface com animações e vídeo de fundo
 ✅ Banco de dados relacional com MySQL para armazenar as tarefas
-  
+✅ O sistema possui autenticação de múltiplos usuários, permitindo que cada pessoa tenha seu próprio login e visualize apenas as suas tarefas.
 
   <h2>📂 Estrutura de Pastas:</h2>
 
