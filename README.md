@@ -1,14 +1,14 @@
-  <h1 align="center">📋 To-Do List - Sistema de Tarefas com PHP + MySQL</h1>
+<h1 align="center">📋 To-Do List - Task Management System with PHP + MySQL</h1>
 
-  <p align="center"><em>Organize suas tarefas de forma simples, com cadastro, login, temas e um banco de dados MySQL por trás.</em></p>
+<p align="center"><em>Organize your tasks simply, with registration, login, themes, and a MySQL database behind it all.</em></p>
 
-  <p align="center">
-  <img src="https://img.shields.io/badge/último%20commit-junho-blue?style=flat-square" />
+<p align="center">
+  <img src="https://img.shields.io/badge/last%20commit-june-blue?style=flat-square" />
   <img src="https://img.shields.io/badge/php-100%25-3776AB?style=flat-square&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/tecnologias-5-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/technologies-5-blue?style=flat-square" />
 </p>
 
-<h3 align="center">Tecnologias e ferramentas utilizadas:</h3>
+<h3 align="center">Technologies and Tools Used:</h3>
 
 <p align="center">
   <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" alt="PHP Badge" />
@@ -20,84 +20,83 @@
 
 ---
 
-## 📋 Sobre o Projeto
+## 📋 About the Project
 
-O **Extractify** é uma aplicação web desenvolvida com **Python (Flask)** que permite ao usuário fazer o **upload de um arquivo PDF** e **converter automaticamente o conteúdo para um arquivo Word (.docx)**.
+**Extractify** is a web application developed with **Python (Flask)** that allows users to **upload a PDF file** and **automatically convert its content to a Word document (.docx)**.
 
-Essa ferramenta realiza a **extração de texto de documentos PDF** usando a biblioteca **pdfplumber** e a **geração de arquivos Word** com a biblioteca **python-docx**.
+This tool performs **text extraction from PDF documents** using the **pdfplumber** library and **Word file generation** using the **python-docx** library.
 
-> ⚠️ *Este projeto tem foco acadêmico e ainda não possui recursos avançados como recuperação de senha. Essas funcionalidades estão planejadas para futuras atualizações.*
+> ⚠️ *This project is focused on academic purposes and currently does not include advanced features like password recovery. These features are planned for future updates.*
 
 ---
 
-## 📌 Funcionalidades principais:
- 
-✅ Sistema de cadastro e login de usuários
-✅ Tela de lista de tarefas com CRUD (Criar, Listar, Atualizar, Excluir)
-✅ Modo claro e escuro (Dark Mode)
-✅ Interface com animações e vídeo de fundo
-✅ Banco de dados relacional com MySQL para armazenar as tarefas
-✅ O sistema possui autenticação de múltiplos usuários, permitindo que cada pessoa tenha seu próprio login e visualize apenas as suas tarefas.
+## 📌 Main Features:
 
-  <h2>📂 Estrutura de Pastas:</h2>
+✅ User registration and login system  
+✅ Task list page with CRUD (Create, Read, Update, Delete)  
+✅ Light and Dark Mode toggle  
+✅ Interface with animations and background video  
+✅ Relational database with MySQL to store tasks  
+✅ Multi-user authentication, allowing each user to have their own login and see only their tasks
 
-  <pre>
-  ├── public/
-  │   ├── css/
-  │   └── js/
-  ├── visao/
-  │   ├── login.php
-  |   ├── cadastro.php
-  |   ├── adicionar_tarefa.php
-  |   ├── editar_tarefa.php
-  |   ├── excluir.php
-  |   └── listar_tarefas.php
-  ├── banco/
-  │   └── conexão.php
-  ├── model/
-  |   ├── Tarefa.php
-  |   └── Usuario.php
-  ├── responsavel/
-  |   ├── LoginResponsavel.php
-  |   └── UsuarioResponsavel.php
-  ├── assets/    ---> Imagens
-  ├── logout.php 
-  ├── index.php
-  ├── package-lock.json
-  ├── package.json
-  └── README.md
-  </pre>
+<h2>📂 Folder Structure:</h2>
 
-  <h2>💻 Como executar localmente:</h2>
+<pre>
+├── public/
+│   ├── css/
+│   └── js/
+├── views/
+│   ├── login.php
+│   ├── register.php
+│   ├── add_task.php
+│   ├── edit_task.php
+│   ├── delete.php
+│   └── list_tasks.php
+├── database/
+│   └── connection.php
+├── model/
+│   ├── Task.php
+│   └── User.php
+├── controller/
+│   ├── LoginController.php
+│   └── UserController.php
+├── assets/    ---> Images
+├── logout.php 
+├── index.php
+├── package-lock.json
+├── package.json
+└── README.md
+</pre>
 
-  <ol>
-    <li>Instale um servidor local como o <strong>XAMPP</strong> ou <strong>WAMP</strong>.</li>
-    <li>Coloque a pasta do projeto dentro da pasta <code>htdocs</code>.</li>
-    <li>Crie o banco de dados MySQL usando o script SQL disponível na pasta <code>banco/</code>.</li>
-    <li>Configure a conexão com o banco no arquivo <code>banco/conexão.php</code>.</li>
-    <li>Acesse no navegador: <code>http://localhost/nome-do-projeto/</code></li>
-  </ol>
+<h2>💻 How to Run Locally:</h2>
 
-  <h2>⚙️ Banco de Dados:</h2>
-  <p>O sistema utiliza MySQL. Dentro da pasta <code>banco/</code> está o script SQL para criação das tabelas.</p>
+<ol>
+  <li>Install a local server such as <strong>XAMPP</strong> or <strong>WAMP</strong>.</li>
+  <li>Place the project folder inside the <code>htdocs</code> directory.</li>
+  <li>Create the MySQL database using the SQL script located in the <code>database/</code> folder.</li>
+  <li>Configure the database connection in the file <code>database/connection.php</code>.</li>
+  <li>Open your browser and go to: <code>http://localhost/project-name/</code></li>
+</ol>
 
-  <h2>🌐 Deploy:</h2>
-  <p>Este projeto é feito para rodar localmente em um ambiente com suporte a PHP e MySQL. Caso queira colocar online, é necessário um servidor com suporte a PHP (ex: Hostinger, 000webhost, InfinityFree, etc).</p>
+<h2>⚙️ Database:</h2>
+<p>The system uses MySQL. Inside the <code>database/</code> folder is the SQL script to create the tables.</p>
 
-  ## 📦 Versão
+<h2>🌐 Deployment:</h2>
+<p>This project is designed to run locally on an environment supporting PHP and MySQL. To deploy online, you will need a hosting provider with PHP support (e.g., Hostinger, 000webhost, InfinityFree, etc.).</p>
 
-  1.0.0
+## 📦 Version
 
-  ---
+1.0.0
 
-  ## 📄 Licença
+---
 
-  Este projeto está sob a licença MIT.
+## 📄 License
 
-  ---
+This project is licensed under the MIT License.
 
-  ## 📬 Contato
+---
 
-  Giovana Marques Silva  
-  giovanamarquessilva24@gmail.com
+## 📬 Contact
 
+Giovana Marques Silva  
+giovanamarquessilva24@gmail.com
