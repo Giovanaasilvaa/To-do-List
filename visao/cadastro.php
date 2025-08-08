@@ -28,7 +28,7 @@ if (isset($_GET['erro'])) {
 <body>
 
    <!-- Dark mode toggle button -->
-   <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+   <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
    <!-- Background video -->
    <video autoplay muted loop id="bg-video">
@@ -38,7 +38,7 @@ if (isset($_GET['erro'])) {
    <!-- Registration form container -->
    <div class="container-registro">
      <div class="login-box-cadastro">
-       <h2>Cadastro de Usuário</h2>
+       <h2>Sign UP</h2>
 
        <!-- Display error message if exists -->
        <?php if ($erro) echo "<p style='color: red;'>$erro</p>"; ?>
@@ -47,7 +47,7 @@ if (isset($_GET['erro'])) {
        <form method="POST" action="../responsavel/UsuarioResponsavel.php" onsubmit="return validarConfirmacao()">
 
          <!-- Name field -->
-         <label for="nome">Nome:</label>
+         <label for="nome">Name:</label>
          <div class="input-box">
            <input type="text" name="nome" required placeholder="Digite seu nome">
          </div>
@@ -59,22 +59,22 @@ if (isset($_GET['erro'])) {
          </div>
 
          <!-- Password field -->
-         <label for="senha">Senha:</label>
+         <label for="senha">Password:</label>
          <div class="input-box">
            <input type="password" name="senha" id="senha" required placeholder="Crie uma senha" oninput="validarSenha()">
          </div>
 
          <!-- Password validation rules -->
          <ul class="senha-regras" id="senha-regras">
-           <li id="regra1">🔴 No mínimo 8 caracteres</li>
-           <li id="regra2">🔴 Pelo menos uma letra maiúscula</li>
-           <li id="regra3">🔴 Pelo menos uma letra minúscula</li>
-           <li id="regra4">🔴 Pelo menos um número</li>
-           <li id="regra5">🔴 Um caractere especial (!@#...)</li>
+           <li id="regra1">🔴 At least 8 characters</li>
+           <li id="regra2">🔴 At least one capital letter</li>
+           <li id="regra3">🔴 At least one lowercase letter</li>
+           <li id="regra4">🔴 At least one number</li>
+           <li id="regra5">🔴 A special character (!@#...)</li>
          </ul>
 
          <!-- Password confirmation -->
-         <label for="confirma_senha">Confirmar Senha:</label>
+         <label for="confirma_senha">Confirm Password:</label>
          <div class="input-box">
            <input type="password" name="confirma_senha" id="confirma_senha" required placeholder="Repita a senha">
          </div>
@@ -82,11 +82,11 @@ if (isset($_GET['erro'])) {
          <small id="feedback-confirma" style="color: red;"></small>
 
          <!-- Submit button -->
-         <button type="submit">Cadastrar</button>
+         <button type="submit">Sign Up</button>
        </form>
 
        <!-- Link to login page -->
-       <p style="margin-top: 10px;">Já tem uma conta? <a class="registro" href="login.php">Faça login</a></p>
+       <p style="margin-top: 10px;">Already have an account?<a class="registro" href="login.php">Sign In</a></p>
      </div>
    </div>
 
