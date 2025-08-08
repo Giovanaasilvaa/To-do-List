@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start the session
+session_start(); 
 require_once '../banco/conexao.php'; // Include database connection
 
 $erro = ''; // Initialize error message variable
@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body class="pagina-login">
     <!-- Dark mode toggle button -->
-    <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+    <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
     <!-- Background video -->
     <video autoplay muted loop id="bg-video">
@@ -55,7 +55,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container-login">
         <div class="login-box">
             <!-- Back button -->
-            <a href="../index.php" class="back">Voltar</a>
+            <a href="../index.php" class="back">Back</a>
 
             <h2>Login</h2>
 
@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <!-- Password input with show/hide toggle -->
-                <label for="senha">Senha:</label>
+                <label for="senha">Password:</label>
                 <div class="input-box">
                     <div class="senha-container">
                         <input type="password" name="senha" id="senha" required placeholder="Digite sua senha">
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 <!-- Forgot password link -->
                 <p class="esqueceu">
-                    <a class="esqueceu" href="visao/esqueci_senha.php">Esqueceu a senha?</a>
+                    <a class="esqueceu" href="visao/esqueci_senha.php">Forgot your password?</a>
                 </p><br><br>
 
                 <!-- Submit button -->
@@ -94,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <!-- Register link -->
             <p style="margin-top: 10px;">
                 Não tem uma conta?
-                <a class="registro" href="cadastro.php">Cadastre-se</a>
+                <a class="registro" href="cadastro.php">Sign Up</a>
             </p>
         </div>
     </div>
