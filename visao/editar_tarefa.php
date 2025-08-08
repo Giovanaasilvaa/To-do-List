@@ -79,51 +79,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
    <!-- Dark mode toggle -->
-   <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+   <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
    <!-- Main container -->
    <body class="container-editar">
 <div class="pagina-add-editar">
-      <h2>Editar Tarefa</h2>
+      <h2>Edit Task</h2>
 
       <!-- Task edit form -->
       <form method="POST">
 
         <!-- Title field -->
-        <label for="titulo">Título:</label>
+        <label for="titulo">Tittle:</label>
         <div class="input-box">
           <input type="text" id="titulo" name="titulo" value="<?= htmlspecialchars($titulo) ?>" required>
         </div>
 
         <!-- Description field -->
-        <label for="descricao">Descrição:</label>
+        <label for="descricao">Description:</label>
         <div class="input-box">
           <textarea id="descricao" name="descricao" rows="4" required><?= htmlspecialchars($descricao) ?></textarea>
         </div>
 
         <!-- Due date field -->
-        <label for="prazo">Prazo:</label>
+        <label for="prazo">Term:</label>
         <div class="input-box">
           <input type="date" id="prazo" name="prazo" value="<?= htmlspecialchars($prazo) ?>">
         </div>
 
         <!-- Task status dropdown -->
-        <label for="status">Status:</label>
-        <div class="input-box">
-          <select id="status" name="status">
-            <option value="pendente" <?= $status === 'pendente' ? 'selected' : '' ?>>Pendente</option>
-            <option value="em andamento" <?= $status === 'em andamento' ? 'selected' : '' ?>>Em andamento</option>
-            <option value="concluida" <?= $status === 'concluida' ? 'selected' : '' ?>>Concluída</option>
-          </select>
-        </div>
+<label for="status">Status:</label>
+<div class="input-box">
+  <select id="status" name="status">
+    <option value="pending" <?= $status === 'pending' ? 'selected' : '' ?>>Pending</option>
+    <option value="in_progress" <?= $status === 'in_progress' ? 'selected' : '' ?>>In progress</option>
+    <option value="completed" <?= $status === 'completed' ? 'selected' : '' ?>>Completed</option>
+  </select>
+</div>
+
 
         <!-- Submit button -->
-        <button type="submit" class="submit-mit">Salvar Alterações</button>
+        <button type="submit" class="submit-mit">Save Changes</button>
       </form>
 
       <!-- Back link -->
       <p style="margin-top: 10px;">
-        <a class="registro" href="listar_tarefas.php">Voltar para lista</a>
+        <a class="registro" href="listar_tarefas.php">Back to list</a>
       </p>
     </div>
   </div>
