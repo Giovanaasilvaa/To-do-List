@@ -1,4 +1,14 @@
 <?php
+// Função para traduzir status do banco para texto amigável
+function statusText($status) {
+    $map = [
+        'pending' => 'Pending',
+        'in_progress' => 'In progress',
+        'completed' => 'Completed'
+    ];
+    return $map[$status] ?? $status;
+}
+
 // Start session to access user data
 session_start();
 
@@ -21,7 +31,7 @@ $tarefas = Tarefa::listar($id_usuario);
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <title>Minhas Tarefas</title>
+    <title>My Tasks</title>
     <!-- Link to CSS stylesheet -->
     <link rel="stylesheet" href="../public/css/style.css" />
 </head>
@@ -29,16 +39,16 @@ $tarefas = Tarefa::listar($id_usuario);
 <body class="container-lista">
 
     <!-- Dark mode toggle button -->
-    <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+    <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
     <div class="pagina-lista-tarefas">
         <!-- Logout link -->
-        <a href="../logout.php" class="back">Sair da Conta</a>
+        <a href="../logout.php" class="back">Log out</a>
         
-        <h1>Minhas Tarefas</h1>
+        <h1>My Tasks</h1>
 
         <!-- Link to add a new task -->
-        <a href="adicionar_tarefa.php" class="btn btn-primario">Adicionar nova tarefa</a>
+        <a href="adicionar_tarefa.php" class="btn btn-primario">Add new task</a>
 
         <!-- Unordered list to display tasks -->
         <ul>
@@ -54,25 +64,25 @@ $tarefas = Tarefa::listar($id_usuario);
 
                                 <!-- Task deadline formatted as DD/MM/YYYY -->
                                 <span class="hora">
-                                    <strong>Prazo: </strong> 
-                                    <?= htmlspecialchars(date('d/m/Y', strtotime($tarefa['prazo']))) ?>
+                                    <strong>Term:</strong> 
+                                    <?= htmlspecialchars(date('m/d/Y', strtotime($tarefa['prazo']))) ?>
                                 </span>
                             </div>
 
                             <!-- Task description -->
                             <p class="descricao"><?= htmlspecialchars($tarefa['descricao']) ?></p>
 
-                            <!-- Task status -->
+                            <!-- Task status (translated) -->
                             <p>
                                 <strong class="status">Status:</strong> 
-                                <?= htmlspecialchars($tarefa['status']) ?>
+                                <?= htmlspecialchars(statusText($tarefa['status'])) ?>
                             </p>
                         </div>
 
                         <!-- Action links for editing and deleting -->
                         <div class="tarefa-acoes">
-                            <a href="editar_tarefa.php?id=<?= $tarefa['id'] ?>">Editar</a>
-                            <a href="excluir.php?id=<?= $tarefa['id'] ?>">Excluir</a>
+                            <a href="editar_tarefa.php?id=<?= $tarefa['id'] ?>">Edit</a>
+                            <a href="excluir.php?id=<?= $tarefa['id'] ?>">Delete</a>
                         </div>
 
                     </div>
