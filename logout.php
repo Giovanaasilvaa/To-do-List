@@ -15,28 +15,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
   <meta charset="UTF-8"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Sair da Conta</title> <!-- Page title (Portuguese: "Log out of account") -->
+  <title>Log out</title> 
   <link rel="stylesheet" href="public/css/style.css"> 
 </head>
 
-<body class="pagina-sair"> <!-- Applies styling for logout page -->
+<body class="pagina-sair"> 
+
   <!-- Dark mode toggle button -->
-  <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button> <!-- "Dark Mode" -->
+  <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button> 
 
-  <div class="confirmar"> <!-- Confirmation box container -->
+  <div class="confirmar"> 
 
-    <h2>Sair da Conta</h2> <br> <!-- "Log Out of Account" -->
-    <p>Você tem certeza que deseja sair da conta?</p><br> <!-- "Are you sure you want to log out?" -->
+    <h2>Log out</h2> <br> 
+    <p>Are you sure you want to log out of your account?</p><br> 
 
     <!-- Form that submits a POST request to this page -->
     <form method="POST">
-        <!-- Confirm button styled with green background -->
-        <button type="submit" style="background-color:rgb(71, 152, 44);">SIM</button> <!-- "YES" -->
+
+        <button type="submit" style="background-color:rgb(71, 152, 44);">YES</button> 
     </form> 
 
     <!-- Cancel and return link -->
     <p style="margin-top: 10px;">
-      <a class="registro" href="visao/listar_tarefas.php">Cancelar e voltar</a> <!-- "Cancel and go back" -->
+      <a class="registro" href="visao/listar_tarefas.php">Cancel and return</a> <!-- "Cancel and go back" -->
     </p>
 
   </div>
