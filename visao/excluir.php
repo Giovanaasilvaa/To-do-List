@@ -63,14 +63,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body class="pagina-excluir">
 
     <!-- Button to toggle dark mode -->
-    <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+    <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
     <div class="confirmar">
-        <h2>Deletar Tarefa</h2>
+        <h2>Delete Task</h2>
 
         <!-- Display confirmation message with task title -->
         <p>
-            Tem certeza que deseja deletar a tarefa 
+           Are you sure you want to delete the task
             <strong><?= htmlspecialchars($tarefa['titulo']) ?></strong>?
         </p>
         
@@ -79,13 +79,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button 
                 type="submit" 
                 style="background-color: #e74c3c; color: white; padding: 10px 20px; border: none; cursor: pointer;">
-                🗑️ Deletar
+                🗑️ Delete
             </button>
         </form>
 
         <!-- Option to cancel and go back -->
         <p style="margin-top: 10px;">
-            <a class="registro" href="listar_tarefas.php">Cancelar e voltar</a>
+            <a class="registro" href="listar_tarefas.php">Cancel and return</a>
         </p>
     </div>
 
