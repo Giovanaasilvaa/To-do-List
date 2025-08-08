@@ -49,16 +49,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Adicionar Tarefa</title>
+    <title>Add Task</title>
     <link rel="stylesheet" href="../public/css/style.css?v=1.0">
 </head>
 <body class="container-add">
 
     <!-- Button to toggle dark mode -->
-    <button id="theme-toggle" class="theme-toggle">🌙 Modo Escuro</button>
+    <button id="theme-toggle" class="theme-toggle">🌙 DarkMode</button>
 
     <div class="pagina-add-tarefas">
-        <h2>Adicionar Nova Tarefa</h2>
+        <h2>Add New Task</h2>
 
         <!-- Displays validation error if any -->
         <?php if (!empty($erro)): ?>
@@ -69,14 +69,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <form method="POST">
 
             <!-- Task title -->
-            <label for="titulo">Título:</label>
+            <label for="titulo">Tittle:</label>
             <div class="input-box">
                 <input type="text" id="titulo" name="titulo" required 
                     value="<?= isset($titulo) ? htmlspecialchars($titulo) : '' ?>">
             </div>
 
             <!-- Task description -->
-            <label for="descricao">Descrição:</label>
+            <label for="descricao">Description:</label>
             <div class="input-box">
                 <textarea id="descricao" name="descricao" rows="4" required>
                     <?= isset($descricao) ? htmlspecialchars($descricao) : '' ?>
@@ -84,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </div>
 
             <!-- Task deadline -->
-            <label for="prazo">Prazo:</label>
+            <label for="prazo">Term:</label>
             <div class="input-box">
                 <input type="date" id="prazo" name="prazo" 
                     value="<?= isset($prazo) ? htmlspecialchars($prazo) : '' ?>">
@@ -94,19 +94,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="status">Status:</label>
             <div class="input-box">
                 <select id="status" name="status">
-                    <option value="pendente" <?= (isset($status) && $status === 'pendente') ? 'selected' : '' ?>>Pendente</option>
-                    <option value="em andamento" <?= (isset($status) && $status === 'em andamento') ? 'selected' : '' ?>>Em andamento</option>
-                    <option value="concluida" <?= (isset($status) && $status === 'concluida') ? 'selected' : '' ?>>Concluída</option>
+                    <option value="pendente" <?= (isset($status) && $status === 'pendente') ? 'selected' : '' ?>>Pending</option>
+                    <option value="em andamento" <?= (isset($status) && $status === 'em andamento') ? 'selected' : '' ?>>In progress</option>
+                    <option value="concluida" <?= (isset($status) && $status === 'concluida') ? 'selected' : '' ?>>Completed</option>
                 </select>
             </div>
 
             <!-- Submit button -->
-            <button type="submit" class="submit-mit">Adicionar Tarefa</button>
+            <button type="submit" class="submit-mit">Add Task</button>
         </form>
 
         <!-- Link to go back to task list -->
         <p style="margin-top: 10px;">
-            <a class="registro" href="listar_tarefas.php">Voltar para lista</a>
+            <a class="registro" href="listar_tarefas.php">Back to list</a>
         </p>
     </div>
 
